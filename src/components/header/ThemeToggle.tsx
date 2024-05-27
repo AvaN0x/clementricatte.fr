@@ -10,6 +10,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { cn } from "@/lib/utils";
 
 export const ThemeToggle = React.forwardRef<
   HTMLButtonElement,
@@ -36,7 +37,7 @@ export const ThemeToggle = React.forwardRef<
             variant="ghost"
             size="icon"
             onClick={updateTheme}
-            className={className}
+            className={cn("bg-background", className)}
           >
             {!mounted ? (
               <IconBlank />
