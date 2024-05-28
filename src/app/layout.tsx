@@ -26,6 +26,21 @@ export const metadata: Metadata = {
       url: "https://github.com/AvaN0x",
     },
   ],
+  icons: [
+    { rel: "icon", url: "https://avatars3.githubusercontent.com/u/27494805" },
+    {
+      rel: "apple-touch-icon",
+      url: "https://avatars3.githubusercontent.com/u/27494805",
+    },
+    {
+      rel: "mask-icon",
+      url: "https://avatars3.githubusercontent.com/u/27494805",
+    },
+    {
+      rel: "image/x-icon",
+      url: "https://avatars3.githubusercontent.com/u/27494805",
+    },
+  ],
 };
 
 export default function RootLayout({
