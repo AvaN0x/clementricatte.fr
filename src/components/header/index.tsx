@@ -19,13 +19,13 @@ import {
   IconBrandLinkedin,
   IconBrandX,
 } from "@/components/icons";
-import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import {
   NavigationMenuIconButton,
   ListItem,
   navigationIconItemClass,
 } from "@/components/header/Navigation";
+import { Logo } from "@/components/Logo";
 
 export function Header() {
   return (
@@ -36,13 +36,7 @@ export function Header() {
             <NavigationMenuItem>
               <Link href="/" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  <Image
-                    src="https://avatars3.githubusercontent.com/u/27494805"
-                    alt="AvaN0x's logo"
-                    width={460}
-                    height={460}
-                    className="size-5 rounded-sm mr-2 border border-1 border-primary"
-                  />
+                  <Logo className="size-5 rounded-sm mr-2 border border-1 border-primary" />
                   <span>AvaN0x</span>
                 </NavigationMenuLink>
               </Link>
