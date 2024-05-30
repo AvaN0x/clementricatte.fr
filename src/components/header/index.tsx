@@ -26,10 +26,12 @@ import {
   navigationIconItemClass,
 } from "@/components/header/Navigation";
 import { Logo } from "@/components/Logo";
+import { SOCIALS } from "@/lib/socials";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 export function Header() {
   return (
-    <header className="py-2 sticky top-0 backdrop-blur-sm bg-background/30 z-[1] h-12">
+    <header className="py-2 sticky top-0 backdrop-blur-sm bg-foreground/5 dark:bg-background/30  z-[1] h-12 border-b border-b-primary/50">
       <div className="max-w-screen-xl mx-auto flex align-middle justify-between px-2 ">
         <NavigationMenu delayDuration={2000}>
           <NavigationMenuList>
@@ -66,48 +68,25 @@ export function Header() {
 
         <NavigationMenu>
           <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuIconButton
-                title="Github"
-                href="https://github.com/AvaN0x"
-                target="_blank"
-              >
-                <IconBrandGithub />
-              </NavigationMenuIconButton>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuIconButton
-                title="X"
-                href="https://x.com/ClemAvaN0x"
-                target="_blank"
-              >
-                <IconBrandX />
-              </NavigationMenuIconButton>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuIconButton
-                title="Discord"
-                href="/discord"
-                target="_blank"
-              >
-                <IconBrandDiscord />
-              </NavigationMenuIconButton>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuIconButton
-                title="Linkedin"
-                href="https://www.linkedin.com/in/clement-ricatte/"
-                target="_blank"
-              >
-                <IconBrandLinkedin />
-              </NavigationMenuIconButton>
-            </NavigationMenuItem>
+            <TooltipProvider>
+              {SOCIALS.map(({ title, url, Icon }) => (
+                <NavigationMenuItem key={title}>
+                  <NavigationMenuIconButton
+                    title={title}
+                    href={url}
+                    target="_blank"
+                  >
+                    <Icon />
+                  </NavigationMenuIconButton>
+                </NavigationMenuItem>
+              ))}
 
-            <Separator orientation="vertical" className="h-6" />
+              <Separator orientation="vertical" className="h-6" />
 
-            <NavigationMenuItem>
-              <ThemeToggle className={navigationIconItemClass} />
-            </NavigationMenuItem>
+              <NavigationMenuItem>
+                <ThemeToggle className={navigationIconItemClass} />
+              </NavigationMenuItem>
+            </TooltipProvider>
           </NavigationMenuList>
         </NavigationMenu>
       </div>

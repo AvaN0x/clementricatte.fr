@@ -7,7 +7,6 @@ import React from "react";
 import {
   Tooltip,
   TooltipContent,
-  TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
@@ -29,30 +28,28 @@ export const ThemeToggle = React.forwardRef<
   }, []);
 
   return (
-    <TooltipProvider>
-      <Tooltip delayDuration={200}>
-        <TooltipTrigger asChild>
-          <Button
-            ref={ref}
-            variant="ghost"
-            size="icon"
-            onClick={updateTheme}
-            className={cn("bg-background", className)}
-          >
-            {!mounted ? (
-              <IconBlank />
-            ) : theme === "dark" ? (
-              <IconSun />
-            ) : (
-              <IconMoon />
-            )}
-          </Button>
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>Changer de thème</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+    <Tooltip delayDuration={200}>
+      <TooltipTrigger asChild>
+        <Button
+          ref={ref}
+          variant="ghost"
+          size="icon"
+          onClick={updateTheme}
+          className={cn("bg-background", className)}
+        >
+          {!mounted ? (
+            <IconBlank />
+          ) : theme === "dark" ? (
+            <IconSun />
+          ) : (
+            <IconMoon />
+          )}
+        </Button>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p>Changer de thème</p>
+      </TooltipContent>
+    </Tooltip>
   );
 });
 ThemeToggle.displayName = "ThemeToggle";

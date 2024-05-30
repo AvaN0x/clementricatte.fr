@@ -11,7 +11,6 @@ import {
 import {
   Tooltip,
   TooltipContent,
-  TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
@@ -51,25 +50,23 @@ export const NavigationMenuIconButton = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof Link> & { title: string }
 >(({ className, title, children, ...props }, ref) => {
   return (
-    <TooltipProvider>
-      <Tooltip delayDuration={200}>
-        <TooltipTrigger asChild>
-          <NavigationMenuLink asChild>
-            <Link
-              ref={ref}
-              className={cn(navigationIconItemClass, "p-1 text-md", className)}
-              {...props}
-            >
-              <span className="sr-only">{title}</span>
-              {children}
-            </Link>
-          </NavigationMenuLink>
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>{title}</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+    <Tooltip delayDuration={200}>
+      <TooltipTrigger asChild>
+        <NavigationMenuLink asChild>
+          <Link
+            ref={ref}
+            className={cn(navigationIconItemClass, "p-1 text-md", className)}
+            {...props}
+          >
+            <span className="sr-only">{title}</span>
+            {children}
+          </Link>
+        </NavigationMenuLink>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p>{title}</p>
+      </TooltipContent>
+    </Tooltip>
   );
 });
 NavigationMenuIconButton.displayName = "NavigationMenuIconButton";
