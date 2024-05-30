@@ -30,7 +30,7 @@
 
       --border: 240 5.9% 90%;
       --input: 240 5.9% 90%;
-      --ring: 240 10% 3.9%;
+      --ring: var(--primary);
 
       --radius: 0.5rem;
     }
@@ -62,7 +62,7 @@
 
       --border: 240 3.7% 15.9%;
       --input: 240 3.7% 15.9%;
-      --ring: 240 4.9% 83.9%;
+      --ring: var(--primary);
     }
   }
 
@@ -72,5 +72,9 @@
     }
     body {
       @apply bg-background text-foreground;
+    }
+
+    .focus-visible-ring {
+      @apply ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
     }
   }
