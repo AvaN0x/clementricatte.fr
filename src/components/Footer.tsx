@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <footer className="py-2  backdrop-blur-sm bg-violet-950/5 dark:bg-violet-950/30 z-[1] border-t border-t-primary/50">
       <div className="max-w-screen-xl mx-auto flex align-middle justify-center px-2 ">
-        <ul className="flex gap-y-2 flex-col md:flex-row items-center">
+        <ul className="flex gap-y-2 flex-col min-[270px]:flex-row items-center">
           <FooterItemLink href={LICENCE_URL}>{LICENCE_NAME}</FooterItemLink>
           <FooterItemLink href="/contact">Contact</FooterItemLink>
         </ul>
@@ -23,7 +23,7 @@ const FooterItemLink = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof Link>
 >(({ className, children, ...props }, ref) => {
   return (
-    <li className="md:after:content-['•'] md:last:after:content-none">
+    <li className="min-[270px]:after:content-['•'] last:after:content-none">
       <Link
         ref={ref}
         className={cn(
