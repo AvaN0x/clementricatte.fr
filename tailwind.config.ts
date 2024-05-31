@@ -74,6 +74,12 @@ const config = {
       },
     },
   },
+  safelist: [
+    {
+      pattern: /^block/,
+      variants: ["sm", "md", "lg", "xl", "2xl"],
+    },
+  ],
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 

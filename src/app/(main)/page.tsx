@@ -1,6 +1,4 @@
-import MouseRadialGradient from "@/components/MouseRadialGradient";
 import { Separator } from "@/components/ui/separator";
-import { cn } from "@/lib/utils";
 import {
   Tooltip,
   TooltipContent,
@@ -110,7 +108,7 @@ const AboutSection = () => {
                       asChild
                       className="size-8"
                     >
-                      <Link href={url}>
+                      <Link href={url} target="_blank">
                         <Icon />
                         <span className="sr-only">{title}</span>
                       </Link>
