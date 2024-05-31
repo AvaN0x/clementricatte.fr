@@ -59,7 +59,8 @@ const AboutSection = () => {
             >
               <p className="mb-2">
                 Mon pseudo vient du mélange de deux sorts du &quot;Monde des
-                sorciers&quot; (Wizarding World)&nbsp;:{" "}
+                sorciers&quot; (Wizarding World, univers d&apos;Harry
+                Potter)&nbsp;:{" "}
                 <span className="italic">
                   <span className="font-semibold dark:font-bold">Ava</span>
                   da&nbsp;Kedavra
@@ -69,9 +70,8 @@ const AboutSection = () => {
                 .
               </p>
               <p className="mb-2">
-                Je suis un grand fan de cet univers et, au moment de choisir mon
-                pseudo, il m&apos;a paru comme étant le plus simple de me baser
-                sur ce dernier pour trouver celui qui me conviendrait.
+                Etant un grand fan de cet univers, il m&apos;a paru évident de
+                m&apos;en servir de base au moment du choix de mon pseudo.
               </p>
             </PopoverContent>
           </Popover>
