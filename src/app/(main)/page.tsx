@@ -5,6 +5,11 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import Image from "next/image";
 import profilePic from "@/assets/profil.png";
 import Link from "next/link";
@@ -37,43 +42,39 @@ const AboutSection = () => {
         <div className="col-span-12 sm:col-span-8 text-justify">
           <h1 className="text-4xl">Clément RICATTE</h1>
 
-          <TooltipProvider>
-            <Tooltip delayDuration={200}>
-              <TooltipTrigger asChild>
-                <h2 className="text-2xl w-fit mt-2">
-                  &quot;
-                  <span className="border-b-4 border-dotted border-primary">
-                    AvaN0x
-                  </span>
-                  &quot;
-                </h2>
-              </TooltipTrigger>
-              <TooltipContent
-                side="bottom"
-                align="start"
-                className="max-w-[400px]"
-              >
-                <p className="mb-2">
-                  Mon pseudo vient du mélange de deux sorts du &quot;Monde des
-                  sorciers&quot; (Wizarding World) :{" "}
-                  <span className="italic">
-                    <span className="font-semibold dark:font-bold">Ava</span>da
-                    Kedavra
-                  </span>{" "}
-                  et{" "}
-                  <span className="font-semibold dark:font-bold italic">
-                    Nox
-                  </span>
-                  .
-                </p>
-                <p className="mb-2">
-                  Je suis un grand fan de cet univers et, au moment de choisir
-                  mon pseudo, il m&apos;a paru comme étant le plus simple de me
-                  baser sur ce dernier pour trouver celui qui me conviendrait.
-                </p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+          <Popover>
+            <PopoverTrigger asChild>
+              <h2 className="text-2xl w-fit mt-2 cursor-pointer">
+                &quot;
+                <span className="border-b-4 border-dotted border-primary">
+                  AvaN0x
+                </span>
+                &quot;
+              </h2>
+            </PopoverTrigger>
+            <PopoverContent
+              side="bottom"
+              align="start"
+              className="w-auto max-w-[400px]"
+            >
+              <p className="mb-2">
+                Mon pseudo vient du mélange de deux sorts du &quot;Monde des
+                sorciers&quot; (Wizarding World) :{" "}
+                <span className="italic">
+                  <span className="font-semibold dark:font-bold">Ava</span>da
+                  Kedavra
+                </span>{" "}
+                et{" "}
+                <span className="font-semibold dark:font-bold italic">Nox</span>
+                .
+              </p>
+              <p className="mb-2">
+                Je suis un grand fan de cet univers et, au moment de choisir mon
+                pseudo, il m&apos;a paru comme étant le plus simple de me baser
+                sur ce dernier pour trouver celui qui me conviendrait.
+              </p>
+            </PopoverContent>
+          </Popover>
 
           <Separator className="bg-primary/20 my-6" />
 
