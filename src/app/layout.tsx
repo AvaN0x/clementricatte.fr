@@ -6,6 +6,8 @@ import { Header } from "@/components/header";
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/Footer";
 import MouseRadialGradient from "@/components/MouseRadialGradient";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -68,6 +70,8 @@ export default function RootLayout({
             </MouseRadialGradient>
           </main>
           <Footer />
+          <Analytics />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
