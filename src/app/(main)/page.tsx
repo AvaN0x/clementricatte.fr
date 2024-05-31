@@ -55,14 +55,14 @@ const AboutSection = () => {
             <PopoverContent
               side="bottom"
               align="start"
-              className="w-auto max-w-[400px]"
+              className="w-auto max-w-[min(400px,calc(100vw-3rem))]"
             >
               <p className="mb-2">
                 Mon pseudo vient du mélange de deux sorts du &quot;Monde des
-                sorciers&quot; (Wizarding World) :{" "}
+                sorciers&quot; (Wizarding World)&nbsp;:{" "}
                 <span className="italic">
-                  <span className="font-semibold dark:font-bold">Ava</span>da
-                  Kedavra
+                  <span className="font-semibold dark:font-bold">Ava</span>
+                  da&nbsp;Kedavra
                 </span>{" "}
                 et{" "}
                 <span className="font-semibold dark:font-bold italic">Nox</span>
