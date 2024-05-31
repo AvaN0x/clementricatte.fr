@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Header } from "@/components/header";
 import { cn } from "@/lib/utils";
+import { Footer } from "@/components/Footer";
+import MouseRadialGradient from "@/components/MouseRadialGradient";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,7 +55,19 @@ export default function RootLayout({
       <body className={cn(inter.className, "transition-colors")}>
         <ThemeProvider attribute="class">
           <Header />
-          <main>{children}</main>
+          <main>
+            <MouseRadialGradient
+              className={cn(
+                "-mt-12 pt-12 h-screen overflow-x-hidden",
+                "bg-gradient-to-tr from-10% via-80%",
+                "from-violet-100/20 via-violet-50/20 to-violet-100/20",
+                "dark:from-violet-900/20 dark:via-violet-950/20 dark:to-violet-900/20"
+              )}
+            >
+              {children}
+            </MouseRadialGradient>
+          </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
