@@ -12,6 +12,7 @@ import profilePic from "@/assets/profil.png";
 import Link from "next/link";
 import { SOCIALS } from "@/lib/socials";
 import { Button } from "@/components/ui/button";
+import { SeparatorText } from "@/components/SeparatorText";
 
 export default function Home() {
   return (
@@ -25,6 +26,8 @@ export default function Home() {
         )}
       >
         <AboutSection />
+        <PresentationSection />
+        <ProjectsSection />
       </MouseRadialGradient>
     </>
   );
@@ -32,7 +35,10 @@ export default function Home() {
 
 const AboutSection = () => {
   return (
-    <section className="max-w-screen-lg mx-auto px-4 md:px-8 my-8 min-h-[60vh] flex items-center ">
+    <section
+      id="about"
+      className="max-w-screen-lg mx-auto px-4 md:px-8 py-8 min-h-[60vh] flex items-center "
+    >
       <div className="grid grid-cols-12 gap-8 items-center">
         <div className="col-span-12 sm:col-span-8">
           <h1 className="text-4xl">Clément RICATTE</h1>
@@ -131,6 +137,34 @@ const AboutSection = () => {
           <div className="-z-[1] absolute bg-primary/25 inset-0 blur-3xl rotate-12 scale-125"></div>
         </div>
       </div>
+    </section>
+  );
+};
+
+const PresentationSection = () => {
+  return (
+    <section
+      id="presentation"
+      className="max-w-screen-lg mx-auto px-4 md:px-8 py-8 "
+    >
+      <SeparatorText>
+        <h2>Présentation</h2>
+      </SeparatorText>
+      <p>🚧 Work in progress ! 🚧</p>
+    </section>
+  );
+};
+
+const ProjectsSection = () => {
+  return (
+    <section
+      id="projects"
+      className="max-w-screen-lg mx-auto px-4 md:px-8 py-8 "
+    >
+      <SeparatorText>
+        <h2>Projets</h2>
+      </SeparatorText>
+      <p>🚧 Work in progress ! 🚧</p>
     </section>
   );
 };
