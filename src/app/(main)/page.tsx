@@ -34,7 +34,7 @@ const AboutSection = () => {
       className="max-w-screen-lg mx-auto px-4 md:px-8 py-8 min-h-[60vh] flex items-center scroll-mt-12 "
     >
       <div className="grid grid-cols-12 gap-8 items-center">
-        <div className="col-span-12 sm:col-span-8">
+        <div className="col-span-12 sm:col-span-8 text-justify">
           <h1 className="text-4xl">Clément RICATTE</h1>
 
           <TooltipProvider>
