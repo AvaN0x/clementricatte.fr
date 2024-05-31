@@ -58,7 +58,7 @@ export default function RootLayout({
           <main>
             <MouseRadialGradient
               className={cn(
-                "-mt-12 pt-12 h-screen overflow-x-hidden",
+                "-mt-12 pt-12 pb-8 min-h-screen overflow-x-hidden",
                 "bg-gradient-to-tr from-10% via-80%",
                 "from-violet-100/20 via-violet-50/20 to-violet-100/20",
                 "dark:from-violet-900/20 dark:via-violet-950/20 dark:to-violet-900/20"

@@ -44,6 +44,7 @@ export const ThemeToggle = React.forwardRef<
           ) : (
             <IconMoon />
           )}
+          <span className="sr-only">Changer de thème</span>
         </Button>
       </TooltipTrigger>
       <TooltipContent>

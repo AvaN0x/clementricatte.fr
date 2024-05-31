@@ -68,8 +68,8 @@ export function Header() {
         </NavigationMenu>
 
         <NavigationMenu>
-          <NavigationMenuList>
-            <TooltipProvider>
+          <TooltipProvider>
+            <NavigationMenuList>
               {SOCIALS.map(({ title, url, Icon }) => (
                 <NavigationMenuItem key={title}>
                   <NavigationMenuIconButton
@@ -81,14 +81,16 @@ export function Header() {
                   </NavigationMenuIconButton>
                 </NavigationMenuItem>
               ))}
+            </NavigationMenuList>
 
-              <Separator orientation="vertical" className="h-6" />
+            <Separator orientation="vertical" className="h-6 bg-primary/20" />
 
+            <NavigationMenuList>
               <NavigationMenuItem>
                 <ThemeToggle className={navigationIconItemClass} />
               </NavigationMenuItem>
-            </TooltipProvider>
-          </NavigationMenuList>
+            </NavigationMenuList>
+          </TooltipProvider>
         </NavigationMenu>
       </div>
     </header>
