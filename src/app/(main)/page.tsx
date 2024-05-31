@@ -10,9 +10,14 @@ import {
 import Image from "next/image";
 import profilePic from "@/assets/profil.png";
 import Link from "next/link";
-import { SOCIALS } from "@/lib/socials";
+import { SOCIALS } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { SeparatorText } from "@/components/SeparatorText";
+import {
+  SECTION_ABOUT_ID,
+  SECTION_PRESENTATION_ID,
+  SECTION_PROJECTS_ID,
+} from "@/app/(main)/constants";
 
 export default function Home() {
   return (
@@ -36,8 +41,8 @@ export default function Home() {
 const AboutSection = () => {
   return (
     <section
-      id="about"
-      className="max-w-screen-lg mx-auto px-4 md:px-8 py-8 min-h-[60vh] flex items-center "
+      id={SECTION_ABOUT_ID}
+      className="max-w-screen-lg mx-auto px-4 md:px-8 py-8 min-h-[60vh] flex items-center scroll-mt-12 "
     >
       <div className="grid grid-cols-12 gap-8 items-center">
         <div className="col-span-12 sm:col-span-8">
@@ -144,8 +149,8 @@ const AboutSection = () => {
 const PresentationSection = () => {
   return (
     <section
-      id="presentation"
-      className="max-w-screen-lg mx-auto px-4 md:px-8 py-8 "
+      id={SECTION_PRESENTATION_ID}
+      className="max-w-screen-lg mx-auto px-4 md:px-8 py-8 scroll-mt-12"
     >
       <SeparatorText>
         <h2>Présentation</h2>
@@ -158,8 +163,8 @@ const PresentationSection = () => {
 const ProjectsSection = () => {
   return (
     <section
-      id="projects"
-      className="max-w-screen-lg mx-auto px-4 md:px-8 py-8 "
+      id={SECTION_PROJECTS_ID}
+      className="max-w-screen-lg mx-auto px-4 md:px-8 py-8 scroll-mt-12"
     >
       <SeparatorText>
         <h2>Projets</h2>

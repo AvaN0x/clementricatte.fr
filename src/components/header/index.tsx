@@ -13,12 +13,6 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { ThemeToggle } from "@/components/header/ThemeToggle";
-import {
-  IconBrandDiscord,
-  IconBrandGithub,
-  IconBrandLinkedin,
-  IconBrandX,
-} from "@/components/icons";
 import { Separator } from "@/components/ui/separator";
 import {
   NavigationMenuIconButton,
@@ -26,8 +20,12 @@ import {
   navigationIconItemClass,
 } from "@/components/header/Navigation";
 import { Logo } from "@/components/Logo";
-import { SOCIALS } from "@/lib/socials";
+import { SOCIALS } from "@/lib/constants";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import {
+  SECTION_PRESENTATION_ID,
+  SECTION_PROJECTS_ID,
+} from "@/app/(main)/constants";
 
 export function Header() {
   return (
@@ -47,11 +45,14 @@ export function Header() {
               <NavigationMenuTrigger>Projets</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 ">
-                  <ListItem title="Projets scolaire" href="/">
-                    Projets réalisés dans un cadre scolaire
+                  <ListItem
+                    title="Présentation"
+                    href={`/#${SECTION_PRESENTATION_ID}`}
+                  >
+                    Présentation personnelle
                   </ListItem>
-                  <ListItem title="Projets personnels" href="/">
-                    Projets réalisés dans un cadre personnel
+                  <ListItem title="Projets" href={`/#${SECTION_PROJECTS_ID}`}>
+                    Projets réalisés dans un cadre personnel et scolaire
                   </ListItem>
                 </ul>
               </NavigationMenuContent>
