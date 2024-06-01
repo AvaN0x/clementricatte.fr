@@ -21,13 +21,16 @@ import {
   SECTION_PRESENTATION_ID,
   SECTION_PROJECTS_ID,
 } from "@/app/(main)/constants";
+import { PageBackground } from "@/components/layout/PageBackground";
 
 export default function Home() {
   return (
     <>
-      <AboutSection />
-      <PresentationSection />
-      <ProjectsSection />
+      <PageBackground>
+        <AboutSection />
+        <PresentationSection />
+        <ProjectsSection />
+      </PageBackground>
     </>
   );
 }
