@@ -103,7 +103,12 @@ export function ContactForm() {
         />
 
         <div className="flex flex-row-reverse">
-          <Button type="submit" disabled={submitting}>
+          <Button
+            type="submit"
+            variant="outline"
+            className="border-primary"
+            disabled={submitting}
+          >
             Envoyer
           </Button>
         </div>
