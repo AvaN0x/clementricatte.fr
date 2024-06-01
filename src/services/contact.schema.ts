@@ -11,7 +11,7 @@ export const ContactFormSchema = z.object({
       message: "Le nom doit contenir au maximum 100 caractères.",
     }),
   // Maximum allowed by discord footer.text is 2048
-  email: z.string().email({ message: "L'email n'est pas valide" }).max(256, {
+  email: z.string().email({ message: "L'email n'est pas valide." }).max(256, {
     message: "L'email doit contenir au maximum 256 caractères.",
   }),
   // Maximum allowed by discord description is 4096
