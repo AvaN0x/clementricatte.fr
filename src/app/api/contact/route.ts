@@ -33,7 +33,7 @@ export async function POST(request: Request) {
       throw new Error("Missing environment variable.");
     }
 
-    fetch(process.env.API_CONTACT_DISCORD_WEBHOOK, {
+    await fetch(process.env.API_CONTACT_DISCORD_WEBHOOK, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
