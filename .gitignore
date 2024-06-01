@@ -37,3 +37,5 @@ next-env.d.ts
 
 # Windows folder Icon
 desktop.ini
+
+.env
