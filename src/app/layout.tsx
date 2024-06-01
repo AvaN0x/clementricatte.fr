@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { Footer } from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -58,6 +59,8 @@ export default function RootLayout({
           <Header />
           <main>{children}</main>
           <Footer />
+          <Toaster richColors />
+
           <Analytics />
           <SpeedInsights />
         </ThemeProvider>

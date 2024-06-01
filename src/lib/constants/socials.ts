@@ -17,6 +17,11 @@ export const SOCIALS = [
     Icon: IconBrandGithub,
   },
   {
+    title: "Linkedin",
+    url: LINKEDIN_URL,
+    Icon: IconBrandLinkedin,
+  },
+  {
     title: "X",
     url: X_URL,
     Icon: IconBrandX,
@@ -25,10 +30,5 @@ export const SOCIALS = [
     title: "Discord",
     url: DISCORD_URL,
     Icon: IconBrandDiscord,
-  },
-  {
-    title: "Linkedin",
-    url: LINKEDIN_URL,
-    Icon: IconBrandLinkedin,
   },
 ] as const;
