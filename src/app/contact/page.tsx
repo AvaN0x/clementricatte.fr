@@ -46,7 +46,7 @@ const ContactSection = () => {
         <div className="flex-1 text-justify">
           <ContactForm />
         </div>
-        <div className="col-span-12 sm:col-span-2 flex sm:flex-col justify-start items-start">
+        <div className="col-span-12 sm:col-span-2 flex sm:flex-col justify-start items-start max-sm:space-x-4">
           <TooltipProvider>
             {SOCIALS.map(({ title, url, Icon }) => (
               <Tooltip delayDuration={200} key={title}>

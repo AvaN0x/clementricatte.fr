@@ -101,7 +101,7 @@ const AboutSection = () => {
             </Link>
             .
           </p>
-          <div>
+          <div className="max-sm:space-x-4 max-sm:mt-4">
             <TooltipProvider>
               {SOCIALS.map(({ title, url, Icon }) => (
                 <Tooltip delayDuration={200} key={title}>
