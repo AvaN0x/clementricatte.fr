@@ -22,6 +22,8 @@ import {
   SECTION_PROJECTS_ID,
 } from "@/app/(main)/constants";
 import { PageBackground } from "@/components/layout/PageBackground";
+import { EXPERIENCES } from "@/lib/constants/experiences";
+import { ExperienceCard } from "@/components/experiences";
 
 export default function Home() {
   return (
@@ -143,11 +145,22 @@ const PresentationSection = () => {
   return (
     <section
       id={SECTION_PRESENTATION_ID}
-      className="max-w-screen-lg mx-auto px-4 md:px-8 py-8 scroll-mt-12"
+      className="max-w-screen-lg mx-auto px-4 md:px-8 py-8 scroll-mt-12 space-y-2"
     >
       <SeparatorText>
         <h2>Présentation</h2>
       </SeparatorText>
+      <div>
+        <h3>Expériences</h3>
+        <div className="grid grid-cols-3 gap-4">
+          {Object.entries(EXPERIENCES.filter((e) => !e.nonRelevant)).map(
+            ([key, experience]) => (
+              <ExperienceCard experience={experience} key={key} />
+            )
+          )}
+        </div>
+      </div>
+
       <p>🚧 Work in progress ! 🚧</p>
     </section>
   );
