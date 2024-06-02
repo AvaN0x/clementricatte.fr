@@ -26,6 +26,13 @@ import { EXPERIENCES } from "@/lib/constants/experiences";
 import { ExperienceCard } from "@/components/experiences";
 import { EDUCATIONS } from "@/lib/constants/educations";
 import { EducationCard } from "@/components/educations";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function Home() {
   return (
@@ -144,6 +151,7 @@ const AboutSection = () => {
 };
 
 const PresentationSection = () => {
+  // TODO clean up carousel, better style (responsive too) and make a component for it
   return (
     <section
       id={SECTION_PRESENTATION_ID}
@@ -155,23 +163,38 @@ const PresentationSection = () => {
       <div className="space-y-6">
         <div className="space-y-2">
           <h3>Expériences</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {Object.entries(EXPERIENCES.filter((e) => !e.nonRelevant)).map(
-              ([key, experience]) => (
-                <ExperienceCard experience={experience} key={key} />
-              )
-            )}
-          </div>
+          <Carousel>
+            <CarouselContent>
+              {Object.entries(EXPERIENCES.filter((e) => !e.nonRelevant)).map(
+                ([key, experience]) => (
+                  <CarouselItem key={key} className="md:basis-1/2 lg:basis-1/3">
+                    <ExperienceCard
+                      experience={experience}
+                      className="h-full"
+                    />
+                  </CarouselItem>
+                )
+              )}
+            </CarouselContent>
+            <CarouselPrevious className="max-xl:static max-xl:mt-6" />
+            <CarouselNext className="max-xl:static max-xl:mt-6 max-xl:float-right" />
+          </Carousel>
         </div>
         <div className="space-y-2">
           <h3>Diplômes</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {Object.entries(EDUCATIONS.filter((e) => !e.nonRelevant)).map(
-              ([key, education]) => (
-                <EducationCard education={education} key={key} />
-              )
-            )}
-          </div>
+          <Carousel>
+            <CarouselContent>
+              {Object.entries(EDUCATIONS.filter((e) => !e.nonRelevant)).map(
+                ([key, education]) => (
+                  <CarouselItem key={key} className="md:basis-1/2 lg:basis-1/3">
+                    <EducationCard education={education} className="h-full" />
+                  </CarouselItem>
+                )
+              )}
+            </CarouselContent>
+            <CarouselPrevious className="max-xl:static max-xl:mt-6" />
+            <CarouselNext className="max-xl:static max-xl:mt-6 max-xl:float-right" />
+          </Carousel>
         </div>
         <p>🚧 Work in progress ! 🚧</p>
       </div>
