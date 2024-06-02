@@ -14,12 +14,9 @@ export function ExperienceCard({
 }) {
   return (
     <Card
-      className={cn(
-        "bg-card/50 p-4 space-y-2 flex flex-col border-primary/75",
-        className
-      )}
+      className={cn("bg-card/50 p-4 space-y-2 border-primary/75", className)}
     >
-      <div className="">
+      <div>
         <CardTitle className="text-lg">{experience.title}</CardTitle>
         <CardDescription className="text-foreground">
           {experience.enterprise}

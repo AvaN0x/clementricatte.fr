@@ -24,6 +24,8 @@ import {
 import { PageBackground } from "@/components/layout/PageBackground";
 import { EXPERIENCES } from "@/lib/constants/experiences";
 import { ExperienceCard } from "@/components/experiences";
+import { EDUCATIONS } from "@/lib/constants/educations";
+import { EducationCard } from "@/components/educations";
 
 export default function Home() {
   return (
@@ -145,23 +147,34 @@ const PresentationSection = () => {
   return (
     <section
       id={SECTION_PRESENTATION_ID}
-      className="max-w-screen-lg mx-auto px-4 md:px-8 py-8 scroll-mt-12 space-y-2"
+      className="max-w-screen-lg mx-auto px-4 md:px-8 py-8 scroll-mt-12"
     >
       <SeparatorText>
         <h2>Présentation</h2>
       </SeparatorText>
-      <div>
-        <h3>Expériences</h3>
-        <div className="grid grid-cols-3 gap-4">
-          {Object.entries(EXPERIENCES.filter((e) => !e.nonRelevant)).map(
-            ([key, experience]) => (
-              <ExperienceCard experience={experience} key={key} />
-            )
-          )}
+      <div className="space-y-6">
+        <div className="space-y-2">
+          <h3>Expériences</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {Object.entries(EXPERIENCES.filter((e) => !e.nonRelevant)).map(
+              ([key, experience]) => (
+                <ExperienceCard experience={experience} key={key} />
+              )
+            )}
+          </div>
         </div>
+        <div className="space-y-2">
+          <h3>Diplômes</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {Object.entries(EDUCATIONS.filter((e) => !e.nonRelevant)).map(
+              ([key, education]) => (
+                <EducationCard education={education} key={key} />
+              )
+            )}
+          </div>
+        </div>
+        <p>🚧 Work in progress ! 🚧</p>
       </div>
-
-      <p>🚧 Work in progress ! 🚧</p>
     </section>
   );
 };

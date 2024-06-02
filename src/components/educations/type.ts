@@ -1,14 +1,17 @@
 import { Techs } from "@/components/techs/type";
 
-export type Experience = {
+export type Education = {
   nonRelevant?: boolean;
   range: {
     start: Date;
     end?: Date;
   };
   title: string;
-  enterprise: string;
+  speciality?: string;
+  diploma?: string;
+  school: string;
   location?: string;
+  highlight?: string;
   techs?: Techs;
 };
-export type Experiences = Experience[];
+export type Educations = Education[];
