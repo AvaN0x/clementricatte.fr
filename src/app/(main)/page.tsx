@@ -99,7 +99,7 @@ const AboutSection = () => {
             <br />
             L&apos;informatique est ma passion depuis que j&apos;ai pu plonger
             dedans, j&apos;en suis l&apos;actualité au quotidien grâce à
-            différents flux anglophone.
+            différents flux anglophones.
           </p>
           <p className="mt-6">
             Vous pouvez me contacter sur l&apos;un de mes réseaux ou depuis mon
