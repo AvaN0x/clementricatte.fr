@@ -94,7 +94,7 @@ export function Header() {
 
             <Separator
               orientation="vertical"
-              className="h-6 bg-primary/20 mx-1"
+              className="h-6 bg-border/75 mx-1"
             />
 
             <NavigationMenuList>

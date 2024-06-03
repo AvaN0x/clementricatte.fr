@@ -60,7 +60,7 @@ const AboutSection = () => {
             <PopoverTrigger asChild>
               <h2 className="text-2xl w-fit mt-2 cursor-pointer">
                 &quot;
-                <span className="border-b-4 border-dotted border-primary">
+                <span className="border-b-4 border-dotted border-primary hover:text-primary transition-colors">
                   AvaN0x
                 </span>
                 &quot;
@@ -90,7 +90,7 @@ const AboutSection = () => {
             </PopoverContent>
           </Popover>
 
-          <Separator className="bg-primary/20 my-6" />
+          <Separator className="bg-border/20 my-6" />
 
           <p className="mb-2">Hey !</p>
           <p className="mb-2">
@@ -143,7 +143,7 @@ const AboutSection = () => {
             alt="Photo de Clément RICATTE"
             className="w-1/3 sm:w-full rounded-sm border border-1 border-primary"
           />
-          <div className="-z-[1] absolute bg-primary/25 inset-0 blur-3xl rotate-12 scale-125"></div>
+          <div className="-z-[1] absolute bg-primary/10 dark:bg-primary/25 inset-0 blur-3xl rotate-12 scale-125"></div>
         </div>
       </div>
     </section>

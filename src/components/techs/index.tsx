@@ -11,10 +11,7 @@ export function TechBadge({
   className?: string;
 }) {
   return (
-    <Badge
-      variant="outline"
-      className={cn("border-primary/50 flex gap-1", className)}
-    >
+    <Badge variant="outline" className={cn("flex gap-1", className)}>
       {tech.icons && tech.icons.length > 0 && (
         <>
           {Object.entries(tech.icons).map(([key, Icon]) => (

@@ -55,7 +55,7 @@ export const HeaderMenu = React.forwardRef<
                   <span className="text-sm text-foreground/80">
                     {headerLink.text}
                   </span>
-                  <ul className="pl-2 relative flex flex-col before:content-[''] before:absolute before:top-0 before:bottom-1 before:left-1 before:w-[1px] before:bg-primary/50">
+                  <ul className="pl-2 relative flex flex-col before:content-[''] before:absolute before:top-0 before:bottom-1 before:left-1 before:w-[1px] before:bg-border/50">
                     {headerLink.sub.map(({ text, href, description }) => (
                       <li key={text}>
                         <Link

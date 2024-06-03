@@ -13,9 +13,7 @@ export function EducationCard({
   className?: string;
 }) {
   return (
-    <Card
-      className={cn("bg-card/50 p-4 space-y-2 border-primary/75", className)}
-    >
+    <Card className={cn("bg-card/50 p-4 space-y-2", className)}>
       <div>
         <CardTitle className="text-lg">{education.title}</CardTitle>
         {education.speciality && (

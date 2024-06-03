@@ -40,7 +40,7 @@ const ContactSection = () => {
             de l&apos;un de mes réseaux sociaux.
           </p>
         </div>
-        <div className="-z-[1] absolute bg-primary/20 inset-0 blur-2xl -rotate-3 scale-125"></div>
+        <div className="-z-[1] absolute bg-primary/10 dark:bg-primary/15 inset-0 blur-2xl -rotate-3 scale-125"></div>
       </div>
       <div className="flex gap-2 sm:gap-8 flex-col-reverse sm:flex-row-reverse">
         <div className="flex-1 text-justify">
