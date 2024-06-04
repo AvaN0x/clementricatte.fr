@@ -163,7 +163,7 @@ const PresentationSection = () => {
       <div className="space-y-6">
         <div className="space-y-2">
           <h3>Expériences</h3>
-          <Carousel>
+          <Carousel opts={{ align: "start" }}>
             <CarouselContent>
               {Object.entries(EXPERIENCES.filter((e) => !e.nonRelevant)).map(
                 ([key, experience]) => (
@@ -182,7 +182,7 @@ const PresentationSection = () => {
         </div>
         <div className="space-y-2">
           <h3>Diplômes</h3>
-          <Carousel>
+          <Carousel opts={{ align: "start" }}>
             <CarouselContent>
               {Object.entries(EDUCATIONS.filter((e) => !e.nonRelevant)).map(
                 ([key, education]) => (
