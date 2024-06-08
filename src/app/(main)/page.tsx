@@ -57,8 +57,8 @@ const AboutSection = () => {
           <h1 className="text-4xl">Clément RICATTE</h1>
 
           <Popover>
-            <PopoverTrigger asChild>
-              <h2 className="text-2xl w-fit mt-2 cursor-pointer">
+            <PopoverTrigger className="focus-visible-ring rounded-sm mt-2">
+              <h2 className="text-2xl w-fit cursor-pointer">
                 &quot;
                 <span className="border-b-4 border-dotted border-primary hover:text-primary transition-colors">
                   AvaN0x
