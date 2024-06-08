@@ -321,6 +321,7 @@ const CarouselDots = React.forwardRef<
           disabled={i === currentSlide}
           className={cn(
             "size-3 rounded-full py-0 px-2 border-border",
+            "max-md:pointer-events-none",
             i === currentSlide && "scale-110 border-foreground"
           )}
           aria-label={`Allez à l'élément ${i + 1}`}
