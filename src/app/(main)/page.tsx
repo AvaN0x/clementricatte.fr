@@ -27,12 +27,10 @@ import { ExperienceCard } from "@/components/experiences";
 import { EDUCATIONS } from "@/lib/constants/educations";
 import { EducationCard } from "@/components/educations";
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+  CardsCarousel,
+  CardsCarouselActions,
+  CardsCarouselItems,
+} from "@/components/CardsCarousel";
 
 export default function Home() {
   return (
@@ -151,7 +149,6 @@ const AboutSection = () => {
 };
 
 const PresentationSection = () => {
-  // TODO clean up carousel, better style (responsive too) and make a component for it
   return (
     <section
       id={SECTION_PRESENTATION_ID}
@@ -161,41 +158,26 @@ const PresentationSection = () => {
         <h2>Présentation</h2>
       </SeparatorText>
       <div className="space-y-6">
-        <div className="space-y-2">
-          <h3>Expériences</h3>
-          <Carousel opts={{ align: "start" }}>
-            <CarouselContent>
-              {Object.entries(EXPERIENCES.filter((e) => !e.nonRelevant)).map(
-                ([key, experience]) => (
-                  <CarouselItem key={key} className="md:basis-1/2 lg:basis-1/3">
-                    <ExperienceCard
-                      experience={experience}
-                      className="h-full"
-                    />
-                  </CarouselItem>
-                )
-              )}
-            </CarouselContent>
-            <CarouselPrevious className="max-xl:static max-xl:mt-6" />
-            <CarouselNext className="max-xl:static max-xl:mt-6 max-xl:float-right" />
-          </Carousel>
-        </div>
-        <div className="space-y-2">
-          <h3>Diplômes</h3>
-          <Carousel opts={{ align: "start" }}>
-            <CarouselContent>
-              {Object.entries(EDUCATIONS.filter((e) => !e.nonRelevant)).map(
-                ([key, education]) => (
-                  <CarouselItem key={key} className="md:basis-1/2 lg:basis-1/3">
-                    <EducationCard education={education} className="h-full" />
-                  </CarouselItem>
-                )
-              )}
-            </CarouselContent>
-            <CarouselPrevious className="max-xl:static max-xl:mt-6" />
-            <CarouselNext className="max-xl:static max-xl:mt-6 max-xl:float-right" />
-          </Carousel>
-        </div>
+        <CardsCarousel>
+          <h3 className="mb-2">Expériences</h3>
+          <CardsCarouselItems
+            items={Object.values(EXPERIENCES.filter((e) => !e.nonRelevant))}
+            formatCard={(experience, className) => (
+              <ExperienceCard experience={experience} className={className} />
+            )}
+          />
+          <CardsCarouselActions />
+        </CardsCarousel>
+        <CardsCarousel>
+          <h3 className="mb-2">Diplômes</h3>
+          <CardsCarouselItems
+            items={Object.values(EDUCATIONS.filter((e) => !e.nonRelevant))}
+            formatCard={(education, className) => (
+              <EducationCard education={education} className={className} />
+            )}
+          />
+          <CardsCarouselActions />
+        </CardsCarousel>
         <p>🚧 Work in progress ! 🚧</p>
       </div>
     </section>
