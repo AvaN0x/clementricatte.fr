@@ -29,7 +29,9 @@ import { EducationCard } from "@/components/educations";
 import {
   CardsCarousel,
   CardsCarouselActions,
-  CardsCarouselItems,
+  CardsCarouselContent,
+  CardsCarouselItem,
+  CardsCarouselToggleExpanded,
 } from "@/components/CardsCarousel";
 
 export default function Home() {
@@ -159,23 +161,35 @@ const PresentationSection = () => {
       </SeparatorText>
       <div className="space-y-6">
         <CardsCarousel>
-          <h3 className="mb-2">Expériences</h3>
-          <CardsCarouselItems
-            items={Object.values(EXPERIENCES.filter((e) => !e.nonRelevant))}
-            formatCard={(experience, className) => (
-              <ExperienceCard experience={experience} className={className} />
+          <div className="flex justify-between items-end">
+            <h3 className="mb-2">Expériences</h3>
+            <CardsCarouselToggleExpanded />
+          </div>
+          <CardsCarouselContent>
+            {Object.entries(EXPERIENCES.filter((e) => !e.nonRelevant)).map(
+              ([key, experience]) => (
+                <CardsCarouselItem key={key}>
+                  <ExperienceCard experience={experience} className="h-full" />
+                </CardsCarouselItem>
+              )
             )}
-          />
+          </CardsCarouselContent>
           <CardsCarouselActions />
         </CardsCarousel>
         <CardsCarousel>
-          <h3 className="mb-2">Diplômes</h3>
-          <CardsCarouselItems
-            items={Object.values(EDUCATIONS.filter((e) => !e.nonRelevant))}
-            formatCard={(education, className) => (
-              <EducationCard education={education} className={className} />
+          <div className="flex justify-between items-end">
+            <h3 className="mb-2">Diplômes</h3>
+            <CardsCarouselToggleExpanded />
+          </div>
+          <CardsCarouselContent>
+            {Object.entries(EDUCATIONS.filter((e) => !e.nonRelevant)).map(
+              ([key, education]) => (
+                <CardsCarouselItem key={key}>
+                  <EducationCard education={education} className="h-full" />
+                </CardsCarouselItem>
+              )
             )}
-          />
+          </CardsCarouselContent>
           <CardsCarouselActions />
         </CardsCarousel>
         <p>🚧 Work in progress ! 🚧</p>
