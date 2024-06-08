@@ -12,8 +12,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 type CardsCarouselContextProps = {
+  id: string;
   hasMultipleSlides: boolean;
   expanded: boolean;
   setExpanded: (mode: boolean) => void;
@@ -42,6 +44,7 @@ export function CardsCarousel({
   const [api, setApi] = React.useState<CarouselApi>();
   const [expanded, setExpanded] = React.useState(false);
   const [hasMultipleSlides, setHasMultipleSlides] = React.useState(false);
+  const id = React.useId();
 
   const onSelect = React.useCallback((api: CarouselApi) => {
     if (!api) {
@@ -68,6 +71,7 @@ export function CardsCarousel({
   return (
     <CardsCarouselContext.Provider
       value={{
+        id,
         hasMultipleSlides,
         expanded,
         setExpanded,
@@ -114,23 +118,33 @@ export function CardsCarouselContent({
 export function CardsCarouselItem({
   children,
   className,
+  index,
 }: {
   children?: React.ReactNode;
   className?: string;
+  index: number | string;
 }) {
-  const { expanded } = useCardsCarousel();
+  const { id, expanded } = useCardsCarousel();
+
+  const child = (
+    <motion.div
+      className="size-full"
+      layoutId={`${id}-${index}`}
+      transition={{ duration: 0.2 }}
+    >
+      {children}
+    </motion.div>
+  );
 
   if (expanded) {
     return (
-      <div className={cn("min-w-0 shrink-0 grow-0 ", className)}>
-        {children}
-      </div>
+      <div className={cn("min-w-0 shrink-0 grow-0 ", className)}>{child}</div>
     );
   }
 
   return (
     <CarouselItem className={cn("md:basis-1/2 lg:basis-1/3", className)}>
-      {children}
+      {child}
     </CarouselItem>
   );
 }

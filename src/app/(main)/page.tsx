@@ -167,8 +167,8 @@ const PresentationSection = () => {
           </div>
           <CardsCarouselContent>
             {Object.entries(EXPERIENCES.filter((e) => !e.nonRelevant)).map(
-              ([key, experience]) => (
-                <CardsCarouselItem key={key}>
+              ([i, experience]) => (
+                <CardsCarouselItem key={i} index={i}>
                   <ExperienceCard experience={experience} className="h-full" />
                 </CardsCarouselItem>
               )
@@ -183,8 +183,8 @@ const PresentationSection = () => {
           </div>
           <CardsCarouselContent>
             {Object.entries(EDUCATIONS.filter((e) => !e.nonRelevant)).map(
-              ([key, education]) => (
-                <CardsCarouselItem key={key}>
+              ([i, education]) => (
+                <CardsCarouselItem key={i} index={i}>
                   <EducationCard education={education} className="h-full" />
                 </CardsCarouselItem>
               )
