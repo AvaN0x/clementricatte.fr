@@ -126,7 +126,7 @@ export function CardsCarouselItem({
 }) {
   const { id, expanded } = useCardsCarousel();
 
-  const child = (
+  const child = index ? (
     <motion.div
       className="size-full"
       layoutId={`${id}-${index}`}
@@ -134,6 +134,8 @@ export function CardsCarouselItem({
     >
       {children}
     </motion.div>
+  ) : (
+    children
   );
 
   if (expanded) {
