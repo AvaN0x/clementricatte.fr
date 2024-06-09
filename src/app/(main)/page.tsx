@@ -33,6 +33,11 @@ import {
   CardsCarouselItem,
   CardsCarouselToggleExpanded,
 } from "@/components/CardsCarousel";
+import {
+  EDUCATION_PROJECTS,
+  PERSONAL_PROJECTS,
+} from "@/lib/constants/projects";
+import { ProjectCard } from "@/components/projects";
 
 export default function Home() {
   return (
@@ -192,7 +197,7 @@ const PresentationSection = () => {
           </CardsCarouselContent>
           <CardsCarouselActions />
         </CardsCarousel>
-        <p>🚧 Work in progress ! 🚧</p>
+        {/* TODO skills */}
       </div>
     </section>
   );
@@ -207,7 +212,41 @@ const ProjectsSection = () => {
       <SeparatorText>
         <h2>Projets</h2>
       </SeparatorText>
-      <p>🚧 Work in progress ! 🚧</p>
+
+      <div className="space-y-6">
+        <CardsCarousel>
+          <div className="flex justify-between items-end">
+            <h3 className="mb-2">Projets personnels</h3>
+            <CardsCarouselToggleExpanded />
+          </div>
+          <CardsCarouselContent>
+            {Object.entries(
+              PERSONAL_PROJECTS.filter((e) => !e.nonRelevant)
+            ).map(([i, project]) => (
+              <CardsCarouselItem key={i} index={i}>
+                <ProjectCard project={project} className="h-full" />
+              </CardsCarouselItem>
+            ))}
+          </CardsCarouselContent>
+          <CardsCarouselActions />
+        </CardsCarousel>
+        <CardsCarousel>
+          <div className="flex justify-between items-end">
+            <h3 className="mb-2">Projets scolaires</h3>
+            <CardsCarouselToggleExpanded />
+          </div>
+          <CardsCarouselContent>
+            {Object.entries(
+              EDUCATION_PROJECTS.filter((e) => !e.nonRelevant)
+            ).map(([i, project]) => (
+              <CardsCarouselItem key={i} index={i}>
+                <ProjectCard project={project} className="h-full" />
+              </CardsCarouselItem>
+            ))}
+          </CardsCarouselContent>
+          <CardsCarouselActions />
+        </CardsCarousel>
+      </div>
     </section>
   );
 };
