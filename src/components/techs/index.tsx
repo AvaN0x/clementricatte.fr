@@ -31,7 +31,7 @@ export function TechList({
   techs?: Tech[];
   className?: string;
 }) {
-  if (!techs || techs.length === 0) return null;
+  if (!techs || techs.length <= 0) return null;
 
   return (
     <div className={cn("flex gap-1 flex-wrap", className)}>

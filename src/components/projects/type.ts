@@ -1,6 +1,10 @@
 import { Techs } from "@/components/techs/type";
 import React from "react";
 
+export type ProjectLink = {
+  href: string;
+  type?: "github" | "youtube" | "default";
+};
 interface IProject {
   nonRelevant?: boolean;
 
@@ -9,10 +13,7 @@ interface IProject {
   description?: string;
 
   contributorsCount?: number;
-  links?: {
-    href: string;
-    type?: "github" | "youtube" | "default";
-  }[];
+  links?: ProjectLink[];
   techs?: Techs;
 
   modal?: React.ReactNode;
