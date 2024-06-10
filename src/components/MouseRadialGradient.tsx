@@ -1,5 +1,5 @@
 "use client";
-import { useRelativeMousePosition } from "@/lib/useMousePosition";
+import { useRelativeMousePosition } from "@/hooks/useMousePosition";
 import { cn } from "@/lib/utils";
 
 export default function MouseRadialGradient({
