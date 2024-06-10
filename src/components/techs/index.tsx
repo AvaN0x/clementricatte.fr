@@ -23,3 +23,21 @@ export function TechBadge({
     </Badge>
   );
 }
+
+export function TechList({
+  techs,
+  className,
+}: {
+  techs?: Tech[];
+  className?: string;
+}) {
+  if (!techs || techs.length === 0) return null;
+
+  return (
+    <div className={cn("flex gap-1 flex-wrap", className)}>
+      {techs.map((t, key) => (
+        <TechBadge key={key} tech={t} />
+      ))}
+    </div>
+  );
+}

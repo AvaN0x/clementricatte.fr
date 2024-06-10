@@ -3,7 +3,7 @@ import { Experience } from "@/components/experiences/type";
 import { cn } from "@/lib/utils";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { formatRange } from "@/lib/dates";
-import { TechBadge } from "@/components/techs";
+import { TechList } from "@/components/techs";
 
 export function ExperienceCard({
   experience,
@@ -26,13 +26,7 @@ export function ExperienceCard({
           })}
         </CardDescription>
       </div>
-      {experience.techs && experience.techs.length > 0 && (
-        <div className="flex gap-1 flex-wrap">
-          {Object.entries(experience.techs).map(([key, t]) => (
-            <TechBadge key={key} tech={t} />
-          ))}
-        </div>
-      )}
+      <TechList techs={experience.techs} />
     </Card>
   );
 }

@@ -3,7 +3,7 @@ import { Education } from "@/components/educations/type";
 import { cn } from "@/lib/utils";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { formatRange } from "@/lib/dates";
-import { TechBadge } from "@/components/techs";
+import { TechList } from "@/components/techs";
 
 export function EducationCard({
   education,
@@ -35,13 +35,7 @@ export function EducationCard({
           })}
         </CardDescription>
       </div>
-      {education.techs && education.techs.length > 0 && (
-        <div className="flex gap-1 flex-wrap">
-          {Object.entries(education.techs).map(([key, t]) => (
-            <TechBadge key={key} tech={t} />
-          ))}
-        </div>
-      )}
+      <TechList techs={education.techs} />
     </Card>
   );
 }
