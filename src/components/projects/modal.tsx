@@ -87,7 +87,7 @@ export function ProjectModal({
       <DrawerTrigger className={cn(modalTriggerClass, className)}>
         {children}
       </DrawerTrigger>
-      <DrawerContent className="max-w-screen-lg mx-auto max-h-[85vh] pb-10">
+      <DrawerContent className="max-w-screen-lg mx-auto max-h-[85vh] pb-10 focus-visible:outline-none">
         <DrawerHeader
           className={cn(
             project.modal &&
