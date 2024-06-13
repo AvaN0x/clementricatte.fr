@@ -308,7 +308,7 @@ const CarouselDots = React.forwardRef<
     <div
       ref={ref}
       className={cn(
-        "flex flex-wrap justify-center items-center gap-2 my-2",
+        "flex flex-wrap justify-center items-center gap-2 my-1",
         !hasMultipleSlides && "hidden",
         className
       )}

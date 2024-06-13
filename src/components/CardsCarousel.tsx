@@ -184,15 +184,15 @@ export function CardsCarouselActions({ className }: { className?: string }) {
   }
 
   return (
-    <div className={cn("flex gap-4", className)}>
+    <div className={cn("flex gap-4 items-center mt-1", className)}>
       <CarouselPrevious
         hideWithoutMultipleSlides
-        className="max-xl:static max-xl:mt-6"
+        className="max-xl:static max-xl:transform-none"
       />
       <CarouselDots className="flex-1" />
       <CarouselNext
         hideWithoutMultipleSlides
-        className="max-xl:static max-xl:mt-6 max-xl:float-right"
+        className="max-xl:static max-xl:transform-none max-xl:float-right"
       />
     </div>
   );
