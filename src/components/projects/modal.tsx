@@ -48,7 +48,7 @@ export function ProjectModal({
         <DialogTrigger className={cn(modalTriggerClass, className)}>
           {children}
         </DialogTrigger>
-        <DialogContent className="flex flex-col max-w-screen-lg max-h-[85vh]">
+        <DialogContent className="flex flex-col max-w-2xl lg:max-w-screen-lg max-h-[85vh]">
           <DialogHeader
             className={cn(
               project.modal &&
@@ -94,7 +94,7 @@ export function ProjectModal({
               "relative after:content-[''] after:absolute after:bottom-0 after:inset-x-8 after:mb-2 after:h-[1px] after:bg-border/50"
           )}
         >
-          <div className="flex w-full mb-2">
+          <div className="flex w-full gap-2 mb-2">
             <DrawerTitle className="flex-1 self-center">
               {project.name && <>{project.name} · </>}
               {project.title}
