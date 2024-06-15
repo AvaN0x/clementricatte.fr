@@ -242,7 +242,6 @@ export const EDUCATION_PROJECTS: EducationProjects = [
     techs: [TECHS.JAVA, TECHS.JAVAFX, TECHS.MYSQL],
   },
   {
-    name: "Projet PHP",
     title: "Site de gestion d'actualités",
     education: "DUT",
     links: [
@@ -301,7 +300,6 @@ export const EDUCATION_PROJECTS: EducationProjects = [
     //     fr: "Gérer plusieurs connexions en simultané de clients vers un serveur",
     //   },
     // ],
-    name: "Projet Système",
     title: "Application console de gestion de places de concert",
     education: "DUT",
     links: [
@@ -324,7 +322,6 @@ export const EDUCATION_PROJECTS: EducationProjects = [
     //     fr: "Découvrir le langage C++ et QT",
     //   },
     // ],
-    name: "Projet C++",
     title: "Application de génération de classes",
     description:
       "Réaliser une application permettant la génération de classes Java en C++.",
