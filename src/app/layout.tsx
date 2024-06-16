@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "@/components/ui/sonner";
+import { BASE_URL } from "@/lib/constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,15 @@ export const metadata: Metadata = {
     template: `%s · Clément RICATTE`,
     default: "Clément RICATTE",
   },
-  description: "Par AvaN0x / Clément RICATTE",
+  description: 'Site personnel de Clément "AvaN0x" RICATTE',
+  metadataBase: new URL(BASE_URL),
+  creator: "Clément RICATTE",
+  authors: [
+    {
+      name: "Clément Ricatte",
+      url: "https://github.com/AvaN0x",
+    },
+  ],
   openGraph: {
     images: [
       {
@@ -27,12 +36,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  authors: [
-    {
-      name: "Clément Ricatte",
-      url: "https://github.com/AvaN0x",
-    },
-  ],
   icons: [
     { rel: "icon", url: "https://avatars3.githubusercontent.com/u/27494805" },
     {
@@ -48,6 +51,10 @@ export const metadata: Metadata = {
       url: "https://avatars3.githubusercontent.com/u/27494805",
     },
   ],
+  twitter: {
+    creator: "@ClemAvaN0x",
+    card: "summary",
+  },
 };
 
 export default function RootLayout({
