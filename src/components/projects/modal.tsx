@@ -15,7 +15,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
-import { IconX } from "@/components/icons";
+import { IconUsers, IconX } from "@/components/icons";
 import { ProjectLinks } from "@/components/projects/links";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 import {
@@ -26,10 +26,43 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const modalTriggerClass =
   "size-full text-left rounded-lg focus-visible-ring focus-visible:ring-inset focus-visible:ring-offset-0";
 
+function ModalContributors({
+  contributorsCount,
+  className,
+}: {
+  contributorsCount: Project["contributorsCount"];
+  className?: string;
+}) {
+  if (!contributorsCount || contributorsCount <= 1) return <></>;
+
+  const title = `${contributorsCount} contributeurs`;
+  return (
+    <TooltipProvider>
+      <Tooltip delayDuration={200}>
+        <TooltipTrigger className="focus-visible-ring rounded-sm" asChild>
+          <div className={cn("flex items-center gap-0.5", className)}>
+            <span className="text-sm text-foreground">{contributorsCount}</span>
+            <IconUsers />
+            <span className="sr-only">{title}</span>
+          </div>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>{title}</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  );
+}
 export function ProjectModal({
   children,
   project,
@@ -67,9 +100,12 @@ export function ProjectModal({
             {project.description && (
               <DialogDescription>{project.description}</DialogDescription>
             )}
-            <div className="flex w-full justify-between items-center flex-wrap min-[450px]:flex-nowrap">
+            <div className="flex w-full gap-2 items-center flex-wrap min-[450px]:flex-nowrap">
+              <ModalContributors
+                contributorsCount={project.contributorsCount}
+              />
               <TechList techs={project.techs} />
-              <ProjectLinks links={project.links} />
+              <ProjectLinks links={project.links} className="ml-auto" />
             </div>
           </DialogHeader>
           {project.modal && (
@@ -114,9 +150,10 @@ export function ProjectModal({
           {project.description && (
             <DrawerDescription>{project.description}</DrawerDescription>
           )}
-          <div className="flex w-full justify-between items-center flex-wrap min-[450px]:flex-nowrap">
+          <div className="flex w-full gap-2 items-center flex-wrap min-[450px]:flex-nowrap">
+            <ModalContributors contributorsCount={project.contributorsCount} />
             <TechList techs={project.techs} />
-            <ProjectLinks links={project.links} />
+            <ProjectLinks links={project.links} className="ml-auto" />
           </div>
         </DrawerHeader>
         {project.modal && (

@@ -8,4 +8,5 @@ export { IconExternalLink } from "./IconExternalLink";
 export { IconMenu } from "./IconMenu";
 export { IconMoon } from "./IconMoon";
 export { IconSun } from "./IconSun";
+export { IconUsers } from "./IconUsers";
 export { IconX } from "./IconX";
