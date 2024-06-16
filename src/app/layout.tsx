@@ -12,7 +12,10 @@ import { Toaster } from "@/components/ui/sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Clément RICATTE",
+  title: {
+    template: `%s · Clément RICATTE`,
+    default: "Clément RICATTE",
+  },
   description: "Par AvaN0x / Clément RICATTE",
   openGraph: {
     images: [

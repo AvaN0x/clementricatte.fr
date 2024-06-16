@@ -11,6 +11,12 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { PageBackground } from "@/components/layout/PageBackground";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Contactez Clément RICATTE depuis ce formulaire.",
+};
 
 export default function Home() {
   return (
