@@ -6,6 +6,7 @@ import { HeaderLinks } from "@/components/header/types";
 
 export * from "./socials";
 
+export const BASE_URL = "https://clementricatte.fr";
 export const LICENCE_NAME = "Licence MIT";
 export const LICENCE_URL =
   "https://github.com/AvaN0x/clementricatte.fr/blob/main/LICENSE";
