@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
 import { Header } from "@/components/header";
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/Footer";
@@ -9,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "@/components/ui/sonner";
 import { BASE_URL } from "@/lib/constants";
+import Providers from "@/components/providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -65,7 +65,7 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <body className={cn(inter.className, "transition-colors")}>
-        <ThemeProvider attribute="class">
+        <Providers>
           <Header />
           <main>{children}</main>
           <Footer />
@@ -73,7 +73,7 @@ export default function RootLayout({
 
           <Analytics />
           <SpeedInsights />
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
