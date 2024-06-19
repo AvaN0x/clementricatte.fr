@@ -1,15 +1,21 @@
 import { TechsRecord } from "@/components/techs/type";
 
 export const TECHS = {
+  "3D": {
+    label: "3D",
+  },
+
   ASM: {
     label: "x86 ASM",
   },
-
   LUA: {
     label: "Lua",
   },
   PY: {
     label: "Python",
+  },
+  SOLIDITY: {
+    label: "Solidity",
   },
 
   // #region C

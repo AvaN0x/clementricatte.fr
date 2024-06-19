@@ -179,6 +179,121 @@ export const PERSONAL_PROJECTS: PersonalProjects = [
 
 export const EDUCATION_PROJECTS: EducationProjects = [
   {
+    name: "pedaki",
+    title: "Outils de génération de classes scolaires",
+    education: "MEWO",
+    links: [
+      {
+        href: "https://github.com/PedakiHQ/pedaki-community/",
+        type: "github",
+      },
+      {
+        href: "https://www.pedaki.fr/",
+      },
+    ],
+    contributorsCount: 3,
+    modal: (
+      <>
+        <ModalP>
+          La création des classes pour les écoles est une tâche complexe et très
+          manuelle. L&apos;objectif de ce projet est de simplifier cette tâche
+          en proposant un outil de génération de classes.
+        </ModalP>
+      </>
+    ),
+    techs: [TECHS.TS, TECHS.REACT, TECHS.NEXTJS],
+  },
+  {
+    name: "SimpsonoVirus",
+    title: "Réalisation d'un jeu vidéo pour Intel 8086",
+    education: "DUT",
+    links: [
+      { href: "https://github.com/AvaN0x/IUT-asmGame", type: "github" },
+      { href: "https://youtu.be/W9PVjym2soM", type: "youtube" },
+    ],
+    contributorsCount: 2,
+    modal: (
+      <>
+        <ModalP>
+          Réalisation d&apos;un jeu vidéo en assembleur pour processeur Intel
+          8086.
+        </ModalP>
+        <ModalP>
+          Ce projet m&apos;a permis de comprendre le fonctionnement d&apos;un
+          processeur et de la chance que l&apos;on a aujourd&apos;hui de ne pas
+          avoir à travailler directement avec dans la majorité des cas.
+        </ModalP>
+        <ModalP>
+          Bien que ce projet ai pu être compliqué, je suis très fier du résultat
+          final et de ce que j&apos;ai pu apprendre en le réalisant.
+        </ModalP>
+      </>
+    ),
+    techs: [TECHS.ASM],
+  },
+  {
+    name: "MEWO BullsEye",
+    title: "Jeu de tir sur des cible en réalité augmentée",
+    education: "MEWO",
+    links: [
+      {
+        href: "https://github.com/AvaN0x/mewo_ar_target",
+        type: "github",
+      },
+      {
+        href: "https://avan0x.github.io/mewo_ar_target/",
+      },
+    ],
+    contributorsCount: 1,
+    modal: (
+      <>
+        <ModalP>
+          Réalisation d&apos;un jeu de tir sur des cibles en réalité augmentée.
+          Le but est d&apos;obtenir le plus de points possible dans le temps
+          imparti.
+        </ModalP>
+        <ModalP>
+          La difficulté impacte le nombre de cible, la fréquence à laquelle
+          elles vont se rétracter et le temps imparti.
+          <br />
+          Un mode bac à sable est également disponible où la limite de temps
+          n&apos;est pas présente.
+        </ModalP>
+      </>
+    ),
+    techs: [TECHS.VUEJS, TECHS.NUXTJS, TECHS.TS, TECHS["3D"]],
+  },
+  {
+    title: "Faussaire de cryptomonnaie",
+    education: "MEWO",
+    links: [
+      {
+        href: "https://github.com/AvaN0x/mewo_faucet",
+        type: "github",
+      },
+      {
+        href: "https://avan0x.github.io/mewo_faucet/",
+      },
+    ],
+    contributorsCount: 1,
+    modal: (
+      <>
+        <ModalP>
+          Réalisation d&apos;un faussaire simple pour une monnaie fictive
+          disponible sur le canal &quot;sepolia&quot; d&apos;Ethereum.
+        </ModalP>
+        <ModalP>
+          Un site a été créé pour permettre aux utilisateurs de récupérer des
+          fonds fictifs avec une intervalle.
+          <br />
+          Ce projet a nécessité la création de deux contrats&nbsp;: la monnaie
+          &quot;Mewo&quot; et le faussaire &quot;Faucet&quot;.
+        </ModalP>
+      </>
+    ),
+    techs: [TECHS.REACT, TECHS.TS, TECHS.SOLIDITY],
+  },
+  {
     // aimedSkills: [
     //   {
     //     en: "Mastery of algorithms and programming concepts",
@@ -265,31 +380,6 @@ export const EDUCATION_PROJECTS: EducationProjects = [
     //   fr: "Mise en œuvre des méthodes de conduite de projet",
     // },
     techs: [TECHS.HTML, TECHS.CSS],
-  },
-  {
-    // aimedSkills: [
-    //   {
-    //     en: "Ability to do good research",
-    //     fr: "Aptitudes à faire de bonnes recherches",
-    //   },
-    //   {
-    //     en: "Understanding of how CPU works",
-    //     fr: "Comprendre les fonctionnement d'un processeur",
-    //   },
-    // ],
-    name: "SimpsonoVirus",
-    title: "Réalisation d'un jeu vidéo pour Intel 8086",
-    education: "DUT",
-    links: [
-      { href: "https://github.com/AvaN0x/IUT-asmGame", type: "github" },
-      { href: "https://youtu.be/W9PVjym2soM", type: "youtube" },
-    ],
-    contributorsCount: 2,
-    // objective: {
-    //   en: "Production of a video game in assembly",
-    //   fr: "Création d'un jeu vidéo en langage assembleur",
-    // },
-    techs: [TECHS.ASM],
   },
   {
     // aimedSkills: [
