@@ -246,7 +246,6 @@ const ProjectsSection = () => {
           </CardsCarouselContent>
           <CardsCarouselActions />
         </CardsCarousel>
-        <p>🚧 Work in progress ! 🚧</p>
       </div>
     </section>
   );
