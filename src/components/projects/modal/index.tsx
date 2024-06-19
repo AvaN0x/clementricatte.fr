@@ -109,9 +109,7 @@ export function ProjectModal({
             </div>
           </DialogHeader>
           {project.modal && (
-            <div className="overflow-y-auto text-justify -mr-6 pr-6">
-              {project.modal}
-            </div>
+            <div className="overflow-y-auto -mr-6 pr-6">{project.modal}</div>
           )}
         </DialogContent>
       </Dialog>
@@ -157,7 +155,7 @@ export function ProjectModal({
           </div>
         </DrawerHeader>
         {project.modal && (
-          <DrawerFooter className="overflow-y-auto text-justify">
+          <DrawerFooter className="overflow-y-auto">
             {project.modal}
           </DrawerFooter>
         )}

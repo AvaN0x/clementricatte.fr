@@ -5,7 +5,6 @@ import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { TechList } from "@/components/techs";
 import { ProjectModal } from "@/components/projects/modal";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 
 export function ProjectCard({
   project,

@@ -1,4 +1,11 @@
 import {
+  ModalLI,
+  ModalLink,
+  ModalP,
+  ModalSeparator,
+  ModalUL,
+} from "@/components/projects/modal/content";
+import {
   EducationProjects,
   PersonalProjects,
   Projects,
@@ -10,10 +17,55 @@ export const PERSONAL_PROJECTS: PersonalProjects = [
     name: "AdezouRP",
     title: "Serveur de roleplay sur FiveM",
     links: [{ href: "https://github.com/AvaN0x/AdezouRP", type: "github" }],
-    // objective: {
-    //   en: "Creation of a RolePlay server in GTA V thanks to open-source ressources from the community and [FiveM](https://fivem.net/).",
-    //   fr: "Réaliser à partir de ressources open-source de la communauté, un serveur RolePlay dans l'univers de GTA V grâce à [FiveM](https://fivem.net/).",
-    // },
+    modal: (
+      <>
+        <ModalP>
+          Réalisation d&apos;un serveur serveur RolePlay dans l&apos;univers de
+          GTA&nbsp;V à partir de ressources open-source de la communauté sur{" "}
+          <ModalLink href="https://fivem.net/">FiveM</ModalLink>.
+        </ModalP>
+        <ModalP>
+          En travaillant sur ce projet, j&apos;ai eu l&apos;occasion de
+          m&apos;occuper de communautés de centaines de joueurs, de gérer des
+          équipes de modération, de développer mes propres scripts/mods et de
+          gérer toute l&apos;infrastructure du serveur.
+        </ModalP>
+        <ModalSeparator />
+        <ModalP>
+          J&apos;ai également eu l&apos;occasion de participer à des projets
+          open-source, de signaler des bugs et de rédiger des tutoriels pour
+          aider les autres membres de cette communauté.
+        </ModalP>
+        <ModalP className="mb-0">
+          Vous pouvez trouver ci-dessous certains posts que j&apos;ai pu écrire
+          sur le forum de la communauté&nbsp;:
+        </ModalP>
+        <ModalUL>
+          <ModalLI>
+            Informations sur les modifications apportées par une mise à jour du
+            jeu&nbsp;:{" "}
+            <ModalLink href="https://forum.cfx.re/t/the-contract-infos-build-2545/4792123?u=avan0x">
+              forum.cfx.re (+58&nbsp;600&nbsp;vues)
+            </ModalLink>
+            .
+          </ModalLI>
+          <ModalLI>
+            Tutoriel pour utiliser des peintures de véhicules spéciales&nbsp;:{" "}
+            <ModalLink href="https://forum.cfx.re/t/how-to-get-the-chameleon-paints/4869883?u=avan0x">
+              forum.cfx.re (+17&nbsp;200&nbsp;vues)
+            </ModalLink>
+            .
+          </ModalLI>
+          <ModalLI>
+            Tutoriel pour charger plusieurs cartes en même temps&nbsp;:{" "}
+            <ModalLink href="https://forum.cfx.re/t/how-to-load-cayoperico-minimap-all-of-the-time/4808760?u=avan0x">
+              forum.cfx.re (+8&nbsp;600&nbsp;vues)
+            </ModalLink>
+            .
+          </ModalLI>
+        </ModalUL>
+      </>
+    ),
     techs: [TECHS.LUA, TECHS.MYSQL, TECHS.JS, TECHS.HTML, TECHS.CSS],
   },
   {
