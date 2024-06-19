@@ -1,3 +1,4 @@
+import { IconBrandGithub } from "@/components/icons";
 import {
   ModalLI,
   ModalLink,
@@ -75,10 +76,44 @@ export const PERSONAL_PROJECTS: PersonalProjects = [
       { href: "https://github.com/AvaN0x/clementricatte.fr", type: "github" },
       { href: "https://clementricatte.fr/" },
     ],
-    // objective: {
-    //   en: "Creation of a personal website",
-    //   fr: "Création d'un site personnel",
-    // },
+    modal: (
+      <>
+        <ModalP>
+          Mon site personnel a pour but de me présenter moi et les différents
+          projets que j&apos;ai pu réaliser.
+        </ModalP>
+        <ModalP className="mb-0">
+          Il a existé sous plusieurs versions, chacune me permettant de tester
+          de nouvelles technologies et de nouvelles manières de présenter mes
+          projets.
+        </ModalP>
+        <ModalUL>
+          <ModalLI>
+            La version actuelle a été réalisée avec{" "}
+            <ModalLink href="https://nextjs.org/">Next.js</ModalLink> et est
+            hébergée sur <ModalLink href="https://vercel.com">Vercel</ModalLink>
+            .
+          </ModalLI>
+          <ModalLI>
+            La version précédente utilisait{" "}
+            <ModalLink href="https://react.dev/">React</ModalLink>, son code est
+            toujours disponible depuis{" "}
+            <ModalLink href="https://github.com/AvaN0x/avan0x.github.io/tree/v2">
+              <IconBrandGithub className="inline" /> github
+            </ModalLink>
+            .
+          </ModalLI>
+          <ModalLI>
+            La première version quant à elle était une simple page HTML/CSS, son
+            code est également accessible depuis{" "}
+            <ModalLink href="https://github.com/AvaN0x/avan0x.github.io/tree/v1">
+              <IconBrandGithub className="inline" /> github
+            </ModalLink>
+            .
+          </ModalLI>
+        </ModalUL>
+      </>
+    ),
     techs: [TECHS.HTML, TECHS.CSS, TECHS.TS, TECHS.REACT],
   },
   {
@@ -87,10 +122,20 @@ export const PERSONAL_PROJECTS: PersonalProjects = [
     links: [
       { href: "https://github.com/AvaN0x/YoutubeDownloader", type: "github" },
     ],
-    // objective: {
-    //   en: "Creation of a small app that allow you to download Youtube videos.",
-    //   fr: "Réaliser une petite application permettant de télécharger des vidéos Youtube.",
-    // },
+    modal: (
+      <>
+        <ModalP>
+          Petite application utilisant une bibliothèque tierce (
+          <ModalLink href="https://github.com/Tyrrrz/YoutubeExplode">
+            <IconBrandGithub className="inline" /> Tyrrrz/YoutubeExplode
+          </ModalLink>
+          ) pour télécharger des vidéos Youtube.
+          <br />
+          Il est également possible d&apos;en récupérer que la source audio et
+          de télécharger des playlists entières.
+        </ModalP>
+      </>
+    ),
     techs: [TECHS.CS, TECHS.WPF],
   },
   {
@@ -99,10 +144,14 @@ export const PERSONAL_PROJECTS: PersonalProjects = [
     links: [
       { href: "https://github.com/AvaN0x/textCapsModifier", type: "github" },
     ],
-    // objective: {
-    //   en: "Creation of a small app that allow you to tweak caps from a text.",
-    //   fr: "Réaliser une petite application permettant de contôler les majuscules d'un texte.",
-    // },
+    modal: (
+      <>
+        <ModalP>
+          Petite application permettant de modifier les majuscules d&apos;un
+          texte à sa guise.
+        </ModalP>
+      </>
+    ),
     techs: [TECHS.CS, TECHS.WPF],
   },
   {
@@ -114,10 +163,16 @@ export const PERSONAL_PROJECTS: PersonalProjects = [
         href: "https://discord.com/api/oauth2/authorize?client_id=724252598437412915&permissions=8&scope=bot",
       },
     ],
-    // objective: {
-    //   en: "Make a bot using [Discord.net](https://github.com/discord-net/Discord.Net).",
-    //   fr: "Réaliser un bot utilisant [Discord.net](https://github.com/discord-net/Discord.Net).",
-    // },
+    modal: (
+      <>
+        <ModalP>
+          Bot proposant quelques commandes simples pour les serveurs{" "}
+          <ModalLink href="https://discord.com/">Discord</ModalLink>.
+          <br />
+          Il réagit également à certains contenu de messages.
+        </ModalP>
+      </>
+    ),
     techs: [TECHS.CS],
   },
 ] as const;
