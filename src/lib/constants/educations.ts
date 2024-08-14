@@ -11,6 +11,7 @@ export const EDUCATIONS: Educations = [
     diploma: "BAC +5",
     school: "MEWO",
     location: "57 Metz, France",
+    highlight: "Major de promotion",
   },
   {
     range: {

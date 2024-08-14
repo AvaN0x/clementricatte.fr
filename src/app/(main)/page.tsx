@@ -99,7 +99,7 @@ const AboutSection = () => {
 
           <p className="mb-2">Hey !</p>
           <p className="mb-2">
-            Je suis développeur fullstack français bien que j&apos;ai
+            Je suis développeur full stack français bien que j&apos;ai
             actuellement une préférence pour le frontend.
             <br />
             L&apos;informatique est ma passion depuis que j&apos;ai pu plonger
