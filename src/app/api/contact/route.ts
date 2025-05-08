@@ -33,12 +33,6 @@ export async function POST(request: Request) {
       throw new Error("Missing environment variable.");
     }
 
-    // Debugging information
-    console.log("Sending message to Discord:", {
-      name,
-      email,
-      content,
-    });
     // Send the message to Discord
     const response = await fetch(process.env.API_CONTACT_DISCORD_WEBHOOK, {
       method: "post",
@@ -60,7 +54,6 @@ export async function POST(request: Request) {
         ],
       }),
     });
-    console.log("Discord response:", response);
 
     if (!response.ok) {
       console.log("Discord response:", response);
