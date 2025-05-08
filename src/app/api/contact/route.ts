@@ -33,7 +33,14 @@ export async function POST(request: Request) {
       throw new Error("Missing environment variable.");
     }
 
-    await fetch(process.env.API_CONTACT_DISCORD_WEBHOOK, {
+    // Debugging information
+    console.log("Sending message to Discord:", {
+      name,
+      email,
+      content,
+    });
+    // Send the message to Discord
+    const response = await fetch(process.env.API_CONTACT_DISCORD_WEBHOOK, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -53,8 +60,15 @@ export async function POST(request: Request) {
         ],
       }),
     });
+    console.log("Discord response:", response);
+
+    if (!response.ok) {
+      console.log("Discord response:", response);
+      throw new Error("Discord webhook returned an error.");
+    }
   } catch (error) {
     // The request was not JSON
+    console.error("Error while sending message to Discord:", error);
     return Response.json(
       {
         success: false,
