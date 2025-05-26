@@ -62,9 +62,11 @@ export const TECHS = {
     label: "CSS3",
   },
 
+  // #region PHP
   PHP: {
     label: "PHP",
   },
+  // #endregion PHP
 
   // #region JS
   JS: {
@@ -112,11 +114,11 @@ export const TECHS = {
   LINUX: {
     label: "Linux",
   },
-  ANDROID: {
-    label: "Android",
-  },
   MACOS: {
     label: "MacOS",
+  },
+  ANDROID: {
+    label: "Android",
   },
   IOS: {
     label: "iOS",

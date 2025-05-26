@@ -46,21 +46,21 @@ export const PERSONAL_PROJECTS: PersonalProjects = [
             Informations sur les modifications apportées par une mise à jour du
             jeu&nbsp;:{" "}
             <ModalLink href="https://forum.cfx.re/t/the-contract-infos-build-2545/4792123?u=avan0x">
-              forum.cfx.re (+58&nbsp;600&nbsp;vues)
+              forum.cfx.re (+63&nbsp;800&nbsp;vues)
             </ModalLink>
             .
           </ModalLI>
           <ModalLI>
             Tutoriel pour utiliser des peintures de véhicules spéciales&nbsp;:{" "}
             <ModalLink href="https://forum.cfx.re/t/how-to-get-the-chameleon-paints/4869883?u=avan0x">
-              forum.cfx.re (+17&nbsp;200&nbsp;vues)
+              forum.cfx.re (+23&nbsp;200&nbsp;vues)
             </ModalLink>
             .
           </ModalLI>
           <ModalLI>
             Tutoriel pour charger plusieurs cartes en même temps&nbsp;:{" "}
             <ModalLink href="https://forum.cfx.re/t/how-to-load-cayoperico-minimap-all-of-the-time/4808760?u=avan0x">
-              forum.cfx.re (+8&nbsp;600&nbsp;vues)
+              forum.cfx.re (+10&nbsp;800&nbsp;vues)
             </ModalLink>
             .
           </ModalLI>

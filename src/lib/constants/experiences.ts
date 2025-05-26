@@ -4,6 +4,14 @@ import { TECHS } from "@/lib/constants/techs";
 export const EXPERIENCES: Experiences = [
   {
     range: {
+      start: new Date("2024-10"),
+    },
+    title: "Développeur web",
+    enterprise: "Happiso",
+    location: "Metz, France",
+  },
+  {
+    range: {
       start: new Date("2022-09"),
       end: new Date("2024-08"),
     },
